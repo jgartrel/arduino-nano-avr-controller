@@ -1,6 +1,6 @@
-# Hello World Project
+# AVR Controller Project
 
-This is a simple "Hello World" project environment for the Arduino Nano (ATmega328P with CH340)
+This is a simple project designed to control a Harmon Kardon AVR 320 receiver based on sensing the status of an automatic S/PDIF switch using the Arduino Nano (ATmega328P with CH340).
 
 ### Getting started
 1.  Start the Vagrant Dev Box:
