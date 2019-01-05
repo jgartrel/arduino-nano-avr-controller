@@ -50,6 +50,10 @@ void irSendCode(unsigned long code) {
 
 
 AvrStates recommendState()  {
+  Serial.print("Power:");
+  Serial.println(digitalRead(pwrSignal));
+  Serial.print("Mute:");
+  Serial.println(digitalRead(muteSignal));
   switch (digitalRead(pwrSignal)) {
     case HIGH: {
       switch (digitalRead(muteSignal)) {
@@ -141,6 +145,12 @@ void setup() {
     digitalWrite(ledPin, LOW);
     delay(1000);
   }
+  Serial.print("Set IR pin HIGH for 10 secs: ");
+  Serial.println(irLedPin);
+  digitalWrite(irLedPin, HIGH);
+  delay(10000);
+  Serial.println("Set IR pin LOW");
+  digitalWrite(irLedPin, LOW);
   Serial.println("Setup End");
 }
 
