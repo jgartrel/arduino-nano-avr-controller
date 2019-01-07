@@ -1,4 +1,3 @@
-#define pwrSignal   3    // pushbutton connected to digital pin 3
 #define muteSignal 11    // pushbutton connected to digital pin 11
 #define ledOut     13    // LED connected to digital pin 13
 #define rmcOut      7    // IR LED HIGH=LED ON digital pin 7
@@ -48,8 +47,6 @@ void irSendCode(unsigned long code) {
 
 
 AvrStates recommendState()  {
-  switch (digitalRead(pwrSignal)) {
-    case HIGH: {
       switch (digitalRead(muteSignal)) {
         case HIGH: {
           // Powered ON and MUTED: turn receiver off
@@ -64,14 +61,6 @@ AvrStates recommendState()  {
           break;
         }
       }
-      break;
-    }
-    case LOW:  {
-      // Powered OFF: turn receiver off
-      return OFF;
-      break;
-    }
-  }
   return OFF;  // Should never get here
 }
 
@@ -130,7 +119,6 @@ void setup() {
   Serial.println("Setup Begin");
   pinMode(ledOut, OUTPUT);
   pinMode(rmcOut, OUTPUT);
-  pinMode(pwrSignal, INPUT);
   pinMode(muteSignal, INPUT);
   digitalWrite(ledOut, LOW);
   digitalWrite(rmcOut, LOW);
