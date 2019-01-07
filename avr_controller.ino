@@ -17,8 +17,6 @@ unsigned long irCmdOff     = 0b00000001000011101111100100000110; // OFF
 enum AvrStates {ON, OFF};      // Establish the valid states for the receiver
 AvrStates avrState = OFF;      // Assume the receiver is off on startup
 AvrStates desiredState = OFF;  // Assume the receiver should be  off on startup
-long lastMillis = 0;
-long loops = 0;
 
 
 void irCarrier(unsigned int irTimeMicroseconds) {
