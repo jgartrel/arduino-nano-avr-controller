@@ -1,7 +1,7 @@
 #define pwrSignal   3    // pushbutton connected to digital pin 3
 #define muteSignal 11    // pushbutton connected to digital pin 11
-#define ledPin     13    // LED connected to digital pin 13
-#define irLedPin    7    // IR LED HIGH=LED ON digital pin 7
+#define ledOut     13    // LED connected to digital pin 13
+#define rmcOut      7    // IR LED HIGH=LED ON digital pin 7
 #define bitTime   562    //length of the carrier bit in microseconds
 
 // put your own codes here - 4 bytes (ADDR1 | ADDR2 | COMMAND1 | COMMAND2)
@@ -20,9 +20,9 @@ AvrStates desiredState = OFF;  // Assume the receiver should be  off on startup
 
 
 void irCarrier(unsigned int irTimeMicroseconds) {
-  digitalWrite(irLedPin, HIGH);
+  digitalWrite(rmcOut, HIGH);
   delayMicroseconds(irTimeMicroseconds);
-  digitalWrite(irLedPin, LOW);
+  digitalWrite(rmcOut, LOW);
 }
 
 
@@ -89,7 +89,7 @@ bool verifyRecommendation(AvrStates targetState,int msecs) {
 
 void avr_on() {
   Serial.println("AVR: On");
-  digitalWrite(ledPin, HIGH);
+  digitalWrite(ledOut, HIGH);
   irSendCode(irCmdOn);
   irSendCode(irCmdDvd);
 }
@@ -97,7 +97,7 @@ void avr_on() {
 
 void avr_off() {
   Serial.println("AVR: Off");
-  digitalWrite(ledPin, LOW);
+  digitalWrite(ledOut, LOW);
   irSendCode(irCmdOff);
 }
 
@@ -128,12 +128,12 @@ void avrMachine() {
 void setup() {
   Serial.begin(9600);
   Serial.println("Setup Begin");
-  pinMode(ledPin, OUTPUT);
-  pinMode(irLedPin, OUTPUT);
+  pinMode(ledOut, OUTPUT);
+  pinMode(rmcOut, OUTPUT);
   pinMode(pwrSignal, INPUT);
   pinMode(muteSignal, INPUT);
-  digitalWrite(ledPin, LOW);
-  digitalWrite(irLedPin, LOW);
+  digitalWrite(ledOut, LOW);
+  digitalWrite(rmcOut, LOW);
   Serial.println("Setup End");
 }
 
