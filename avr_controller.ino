@@ -29,8 +29,8 @@ void irSendCode(unsigned long code) {
   Serial.print("Sending IR Code:");
   Serial.println(code);
   // send the leading pulse
-  irCarrier(9000);            //9ms of carrier
-  delayMicroseconds(4500);    //4.5ms of silence
+  irCarrier(9000);            // 9ms of carrier
+  delayMicroseconds(4500);    // 4.5ms of silence
 
   // send the user defined 4 byte/32bit code
   for (int i=0; i<32; i++)            // send all 4 bytes or 32 bits
@@ -43,6 +43,7 @@ void irSendCode(unsigned long code) {
      code<<=1;                        // shift to the next bit for this byte
     }
   irCarrier(bitTime);                 // send a single STOP bit.
+  delayMicroseconds(4500);            // 4.5ms of silence
 }
 
 
@@ -81,6 +82,7 @@ bool verifyRecommendation(AvrStates targetState,int msecs) {
 void avr_on() {
   Serial.println("AVR: On");
   irSendCode(irCmdOn);
+  delay(1000);  // Add delay to allow receiver to turn on fully
   irSendCode(irCmdDvd);
 }
 
