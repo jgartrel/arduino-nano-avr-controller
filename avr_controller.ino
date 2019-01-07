@@ -53,11 +53,13 @@ AvrStates recommendState()  {
       switch (digitalRead(muteSignal)) {
         case HIGH: {
           // Powered ON and MUTED: turn receiver off
+          digitalWrite(ledOut, HIGH);
           return OFF;
           break;
         }
         case LOW: {
           // Powered ON and NOT muted: turn receiver on
+          digitalWrite(ledOut, LOW);
           return ON;
           break;
         }
@@ -89,7 +91,6 @@ bool verifyRecommendation(AvrStates targetState,int msecs) {
 
 void avr_on() {
   Serial.println("AVR: On");
-  digitalWrite(ledOut, HIGH);
   irSendCode(irCmdOn);
   irSendCode(irCmdDvd);
 }
@@ -97,7 +98,6 @@ void avr_on() {
 
 void avr_off() {
   Serial.println("AVR: Off");
-  digitalWrite(ledOut, LOW);
   irSendCode(irCmdOff);
 }
 
