@@ -49,15 +49,15 @@ void irSendCode(unsigned long code) {
 
 AvrStates recommendState()  {
   switch (digitalRead(muteSignal)) {
-    case HIGH: {
+    case LOW: {
       // Powered ON and MUTED: turn receiver off
-      digitalWrite(ledOut, HIGH);
+      digitalWrite(ledOut, LOW);
       return OFF;
       break;
     }
-    case LOW: {
+    case HIGH: {
       // Powered ON and NOT muted: turn receiver on
-      digitalWrite(ledOut, LOW);
+      digitalWrite(ledOut, HIGH);
       return ON;
       break;
     }
