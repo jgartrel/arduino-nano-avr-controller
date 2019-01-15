@@ -1,6 +1,6 @@
 #define muteSignal 11    // mute input connected to digital pin 11
 #define ledOut     13    // LED connected to digital pin 13
-#define rmcOut      7    // IR LED HIGH=LED ON digital pin 7
+#define rmcOut      3    // IR LED HIGH=LED ON digital pin 3
 #define bitTime   562    // length of the carrier bit in microseconds
 
 // put your own codes here - 4 bytes (ADDR1 | ADDR2 | COMMAND1 | COMMAND2)
