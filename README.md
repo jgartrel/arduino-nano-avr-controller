@@ -22,12 +22,13 @@ This project is basically an extention board for an amazing audio switch made by
 I also used some parts I had laying around, but here are some links to kits that contain those parts:
 *  [Dupont Connector Housing](https://www.amazon.com/gp/product/B01G0I0ZZK) and Right Angle 2.54mm pitch pin headers
     - by Glarks (available from Amazon)
+    - I used right-angle 2.54mm pitch pin headers, which are also supplied in this kit.
 *  [Aux Cable](https://www.amazon.com/gp/product/B072FFV5Y7)
     - by Tainston (available from Amazon)
-    - Note: Any cheap mono or stereo aux cable will work.
+    - Any cheap mono or stereo aux cable will work.
 *  [Solid Core Hookup Wire](https://www.amazon.com/gp/product/B00B4ZRPEY)
     - by Electronix Express
-    - Note: you could just use the jumper cable wires above or leave solder trails across the PCB, but I prefer solid core wire.
+    - You could use the jumper cable wires above or leave solder trails across the PCB, but I prefer solid-core wire.
 
 
 ### Putting it all together
@@ -47,7 +48,7 @@ For reference here are the relavent schematics for the components above:
     - This schematic is not the same part, but the dimensions seem to be identical.
 *  [Harmon Kardon AVR 320 Service Manual](https://www.vintageshifi.com/repertoire-pdf/pdf/telecharge.php?pdf=Harman-Kardon-AVR-320-Service-Manual.pdf)
     - This schematic is for my reciever.
-    - We plug directly into the "Remote IR Input" #24 in the Service Manual
+    - Plug directly into "Remote IR Input", connector #24 in the Service Manual.
 
 
 ## Programming the Arduino Nano
