@@ -24,6 +24,7 @@ For reference here are the relavent schematics for the parts above:
 The setup is pretty simple. The Arduino sources power and the state of the mute signal from the Audio switch, then sends a demodulated NEC IR signal to the HK AVR 320 receiver.
 
 This is a functional diagram of how things are wired up:
+![Functional Diagram](diagrams/avr.svg)
 
 
 ## Programming the Arduino Nano
