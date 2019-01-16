@@ -25,27 +25,6 @@ The setup is pretty simple. The Arduino sources power and the state of the mute 
 
 This is a functional diagram of how things are wired up:
 
-![Functional Diagram](https://g.gravizo.com/svg?
-  digraph G {
-    graph [rankdir = LR];
-    node[shape=record];
-
-    switch [label="Audio Switch", height=2];
-    nano   [label="{ {<V5> 5V |<GND1> GND |<D11> D11 } | Arduino Nano | {<GND2> GND |<D3> D3} }", height=2];
-    jack   [label="{ {2|3|<P1>1|4|<P5>5} | 3.5mm \n Phono Jack }", height=1];
-    avr    [label="HK AVR320", height=4];
-
-    switch -> nano:V5   [label="5V"];
-    switch -> nano:GND1 [label="Ground"];
-    switch -> nano:D11  [label="Mute Signal"];
-
-    nano:GND2 -> jack:P1 [label="Sleeve"];
-    nano:D3   -> jack:P5 [label="Tip"];
-
-    jack   -> avr [label="Remote IR Input"];
-
-  }
-)
 
 ## Programming the Arduino Nano
 
