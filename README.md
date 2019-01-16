@@ -19,22 +19,35 @@ This project is basically an extention board for an amazing audio switch made by
 *  [Aike 3.5mm Plastic PCB Mount 5-Pin Stereo Socket Audio Connector](https://www.amazon.com/gp/product/B01N5DIZQG)
     - by Aike (available from Amazon)
 
-For reference here are the relavent schematics for the parts above:
-*  [ESS, Sabre Premier Stereo DAC - ES9023](https://datasheetspdf.com/pdf-file/1132651/ESS/ES9023/1)
-    - Pick up the Mute_B signal and DGND, the 5V line can be picked up from any via connected to IC3.
-*  [Elegoo Arduino Nano V3.0 (ATmega328P with CH340)](http://actrl.cz/blog/wp-content/uploads/nano_ch340_schematics-rev1.pdf)
-    - This is the best one I could find. More details about the board can be found [here](http://actrl.cz/blog/index.php/2016/arduino-nano-ch340-schematics-and-details/).
-    - The official Nano v3.0 schematics are [here](https://www.arduino.cc/en/uploads/Main/Arduino_Nano-Rev3.2-SCH.pdf).
-*  [Aike 3.5mm 5-Pin Audio Connector](http://www.sparkfun.com/datasheets/Prototyping/Audio-3.5mm.pdf)
-    - This schematic is not the same part, but the dimensions seem to be identical.
-*  [Harmon Kardon AVR 320 Service Manual](https://www.vintageshifi.com/repertoire-pdf/pdf/telecharge.php?pdf=Harman-Kardon-AVR-320-Service-Manual.pdf)
-    - The schematic for my reciever.
+I also used some parts I had laying around, but here are some links to kits that contain those parts:
+*  [Dupont Connector Housing](https://www.amazon.com/gp/product/B01G0I0ZZK) and Right Angle 2.54mm pitch pin headers
+    - by Glarks (available from Amazon)
+*  [Aux Cable](https://www.amazon.com/gp/product/B072FFV5Y7)
+    - by Tainston (available from Amazon)
+    - Note: Any cheap mono or stereo aux cable will work.
+*  [Solid Core Hookup Wire](https://www.amazon.com/gp/product/B00B4ZRPEY)
+    - by Electronix Express
+    - Note: you could just use the jumper cable wires above or leave solder trails across the PCB, but I prefer solid core wire.
+
 
 ### Putting it all together
 The setup is pretty simple. The Arduino sources power and the state of the mute signal from the Audio switch, then sends a demodulated NEC IR signal to the HK AVR 320 receiver.
 
 This is a functional diagram of how things are wired up:
 ![Functional Diagram](diagrams/avr.svg)
+
+For reference here are the relavent schematics for the components above:
+*  [ESS, Sabre Premier Stereo DAC - ES9023](https://datasheetspdf.com/pdf-file/1132651/ESS/ES9023/1) (DAC on the Audio Switch)
+    - From a convenient via near the DAC, pick up the Mute_B signal and DGND. The 5V line can be picked up from any via connected to 5V input of IC3 or C33.
+*  [Elegoo Arduino Nano V3.0 (ATmega328P with CH340)](http://actrl.cz/blog/wp-content/uploads/nano_ch340_schematics-rev1.pdf)
+    - This is the best schematic I could find. More details about the board can be found [here](http://actrl.cz/blog/index.php/2016/arduino-nano-ch340-schematics-and-details/).
+    - The official Nano v3.0 schematic is [here](https://www.arduino.cc/en/uploads/Main/Arduino_Nano-Rev3.2-SCH.pdf).
+    - Since USB provides reglated power, we connect power directly to 5V.
+*  [Aike 3.5mm 5-Pin Audio Connector](http://www.sparkfun.com/datasheets/Prototyping/Audio-3.5mm.pdf)
+    - This schematic is not the same part, but the dimensions seem to be identical.
+*  [Harmon Kardon AVR 320 Service Manual](https://www.vintageshifi.com/repertoire-pdf/pdf/telecharge.php?pdf=Harman-Kardon-AVR-320-Service-Manual.pdf)
+    - This schematic is for my reciever.
+    - We plug directly into the "Remote IR Input" #24 in the Service Manual
 
 
 ## Programming the Arduino Nano
