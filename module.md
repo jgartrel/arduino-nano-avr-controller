@@ -31,7 +31,7 @@ I also used some parts I had laying around, but here are some links to kits that
 The setup is pretty simple. The Arduino sources power and the state of the mute signal from the Audio switch, then sends a demodulated NEC IR signal to the HK AVR 320 receiver.
 
 This is a functional diagram of how things are wired up:
-![Functional Diagram](diagrams/avr.svg)
+![Functional Diagram](diagrams/avr.svg "Functional Diagram")
 
 For reference here are the relavent schematics for the components above:
 *  [Atmel, AT90USB162](http://ww1.microchip.com/downloads/en/devicedoc/doc7707.pdf) (Microcontroller on the Audio Switch)
@@ -55,14 +55,14 @@ Cut the 10cm x 10cm PBC down to 10cm x 80cm. I recommend cutting the bottom rows
 
 I recommend placing the phono jack onto the board temporarily just to verify that it exactly fits through the panel of the case. Mine is inset by a couple mills but is not noticeable in the final assembly, nor does it have a functional impact. See Figure 1.
 
-![Figure 1](diagrams/IMG_9891.jpg)
+![Figure 1](diagrams/IMG_9891.jpg "Figure 1")
     Figure 1
 
 **IMPORTANT:** I also recommed that you line up and mark the hole that you are going to drill into the face plate at this point. It is much easier to line up the hole with the faceplace when you have not yet cut the notches below. To do this remove all of the components from the PCB and insert it into the case and close the case up. I noticed that column P was exactly centered on one of the holes in the face plate. I then took the PCB out of the case, but left the faceplate on. Place some tape over the outside of the faceplate in the area where the hole will end up. See Figure 5 below. For my switch, after turning it upside down, I could just rest the PCB on top of the screws for the faceplate. I aligned column P with the exact center of the open hole. On the tape, I marked the top edge of the PCB at column I (the very edge of the PCB). I then used the cut edge of the PCB to measure up exactly one hole (2.54mm) which turned out to be the perfect hight for center of the hole. 
 
 Since you are making a PCB sandwich, and so it fits into the case properly, notches will need to be cut for any RCA jacks you have on your Audio Switch. This may be none, it may be as many as 5. Simply cut along the set of holes that are just larger than the component you are trying to accommodate. See Figure 2.
 
-![Figure 2](diagrams/IMG_9897.jpg)
+![Figure 2](diagrams/IMG_9897.jpg "Figure 2")
     Figure 2
 
 ### Soldering the Components ###
@@ -70,9 +70,9 @@ The next step is create the required jumper wires and to solder all of the compo
 
 Take the probe ends of the wires and insert them into the via holes show in Figure 3 below. Near the DAC, pick up the Mute_B signal and DGND. These are located on either side of C27, and there are convenient via holes on either side of C27. The 5V line can be picked up from any via connected to 5V input of IC3 or C33. I used the via hole that the far left of the board as shown in Figure 3. I used the red wire for 5V, green for GND, and the white wire for the mute signal.
 
-Next I soldered right-angle pin headers onto the Arduino nano to accommodate the dupont connectors without running into the Audio switch board below. I soldered it such that the black spacer for the header pins was used as a spacer below the Nano and the right angle came up through the Nano. This made it tricky to solder without being messy. If I did the project over again, I would have used the straight pin headers to solder to the PCB. I would have then soldered the right angle pin headers to the six pin ICSP socket. It turns out that the 5V, GND and D11 pins are all nicely lined up in the ICSP socket. See the [Nano Pinout Diagram](https://components101.com/microcontrollers/arduino-nano) for details on the ICSP pinout. I soldered both the Arduino Nano and Phono jack to the PCB as show in Figure 2 and Figure 3.
+Next I soldered right-angle pin headers onto the Arduino nano to accommodate the Dupont connectors without running into the Audio switch board below. I soldered it such that the black spacer for the header pins was used as a spacer below the Nano and the right angle came up through the Nano. This made it tricky to solder without being messy. If I did the project over again, I would have used the straight pin headers to solder to the PCB. I would have then soldered the right angle pin headers to the six pin ICSP socket. It turns out that the 5V, GND and D11 pins are all nicely lined up in the ICSP socket. See the [Nano Pinout Diagram](https://components101.com/microcontrollers/arduino-nano) for details on the ICSP pinout. I soldered both the Arduino Nano and Phono jack to the PCB as show in Figure 2 and Figure 3.
 
-![Figure 3](diagrams/IMG_9893.jpg)
+![Figure 3](diagrams/IMG_9893.jpg "Figure 3")
     Figure 3
 
 Finally, I soldered hookup wire from GND and D3 to Sleeve (pin 1) and Tip (pin 5) respectively on the phono jack. See Figure 2 above.
@@ -83,8 +83,8 @@ Hopefully you have already measured where the hole should be before you cut the 
 ### Final assembly ###
 Put the back cover on, but do not tighten the screws all the way. Make your PCB sandwich; be sure to lay the wires in between the two boards with nothing sticking out the sides. See Figure 2. Insert the PCB sandwich into the case, being careful to align the boards into their respective slots without putting lateral pressure on the RCA jacks. The whole thing should slide effortlessly into the case. See figure 4. Add the front cover ensuring that all of the compoents fit through their respective holes. See Figure 5. Tighten the front and back screws fully and you should be done!
 
-![Figure 4](diagrams/IMG_9894.jpg)
+![Figure 4](diagrams/IMG_9894.jpg "Figure 4")
     Figure 4
 
-![Figure 5](diagrams/IMG_9895.jpg)
+![Figure 5](diagrams/IMG_9895.jpg "Figure 5")
     Figure 5
