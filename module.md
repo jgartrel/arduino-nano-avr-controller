@@ -75,13 +75,13 @@ Next I soldered right-angle pin headers onto the Arduino nano to accommodate the
 ![Figure 3](diagrams/IMG_9893.jpg)
     Figure 3
 
-Finally, I soldered hookup wire from GND and D3 to Sleeve (pin 1) and Tip (pin 5) respectively on the phono jack. See Figure 3 above.
+Finally, I soldered hookup wire from GND and D3 to Sleeve (pin 1) and Tip (pin 5) respectively on the phono jack. See Figure 2 above.
 
 ### Cutting a hole in the face plate. ###
 Hopefully you have already measured where the hole should be before you cut the PCB and soldered the components. It is much easier to do that before the componets are added to the board. Take the faceplate off of the case and clamp it down to a scrap piece of lumber. Make sure that you have put a piece of tape over the faceplate in the area you are drilling. Using a very small drill bit make a pilot hole through the faceplate. Use a 1/4" (or 6mm) drill bit to then drill through the faceplate. Unclamp the faceplate and remove the tape, knock any remaining burrs off of the faceplate with anything other than your finger. The clamp and tape method created a very clean hole for me and left no burrs.
 
 ### Final assembly ###
-Put the back cover on, but do not tighten the screws all the way. Make your PCB sandwich while being sure to lay the wires in between with nothing sticking out the sides. See Figure 2. Insert the PCB sandwich into the case, being careful to align the boards into their respective slots without putting lateral pressure on the RCA jacks. The whole thing should slide effortlessly into the case. See figure 4. Add the front cover ensuring that all of the compoents fit through their respective holes. See Figure 5. Tighten the front and back screws fully and youshould be done!
+Put the back cover on, but do not tighten the screws all the way. Make your PCB sandwich; be sure to lay the wires in between the two boards with nothing sticking out the sides. See Figure 2. Insert the PCB sandwich into the case, being careful to align the boards into their respective slots without putting lateral pressure on the RCA jacks. The whole thing should slide effortlessly into the case. See figure 4. Add the front cover ensuring that all of the compoents fit through their respective holes. See Figure 5. Tighten the front and back screws fully and you should be done!
 
 ![Figure 4](diagrams/IMG_9894.jpg)
     Figure 4
