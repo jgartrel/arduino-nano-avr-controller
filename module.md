@@ -51,9 +51,7 @@ For reference here are the relavent schematics for the components above:
 Below is a high-level overview of what went into creating the expansion module. Essentially, the goal is to create a PCB sandwich that we can then put into the original case.
 
 ### Cutting the PCB ###
-1.  Cut the 10cm x 10cm PBC down to 10cm x 8cm. I recommend cutting the bottom rows off of the PCB. This will ensure that you can maintain the good side margins to fit into the case and can position the phono jack off the bottom end of the PCB. Cutting through the very top of the holes in Row 30 made the board exactly the right size and easy to cut. A very light sanding took a little bit off of the board making it fit snuggly into the case with no wiggle.
-
-I recommend placing the phono jack onto the board temporarily just to verify that it exactly fits through the panel of the case. Mine is inset by a couple mills but is not noticeable in the final assembly, nor does it have a functional impact. See Figure 1.
+1.  Cut the 10cm x 10cm PBC down to 10cm x 8cm. I recommend cutting the bottom rows off of the PCB. This will ensure that you can maintain the good side margins to fit into the case and can position the phono jack off the bottom end of the PCB. Cutting through the very top of the holes in Row 30 made the board exactly the right size and easy to cut. A very light sanding took a little bit off of the board making it fit snuggly into the case with no wiggle. I recommend placing the phono jack onto the board temporarily just to verify that it exactly fits through the panel of the case. Mine is inset by a couple mills but is not noticeable in the final assembly, nor does it have a functional impact. See Figure 1.
 
     ![Figure 1](diagrams/IMG_9891.jpg "Figure 1")
         Figure 1.
