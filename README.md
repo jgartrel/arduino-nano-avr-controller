@@ -21,9 +21,7 @@ The setup is pretty simple. The Arduino sources power and the state of the mute 
 This is a functional diagram of how things are wired up:
 ![Functional Diagram](diagrams/avr.svg "Functional Diagram")
 
-Please see the [Daughter Board Module](module.md) doc for a more specific parts list and detailed instructions for building the module.
-
-The final project looks like this:
+Please see the [Daughter Board Module](module.md) for a more specific parts list and detailed instructions for building the module. The final project looks like this when completed:
 
 | Internal View | External View |
 |:-------------:|:-------------:|
