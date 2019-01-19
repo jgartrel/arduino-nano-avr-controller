@@ -12,6 +12,8 @@ This project is basically an extention board for an amazing audio switch made by
     - Made by Benjamin Kerschner (avaiable from Tindie), use firmware revision 1.1.1 or later
 *  [Elegoo Arduino Nano v3.0 (ATmega328P with CH340)](https://www.amazon.com/gp/product/B071NMBP4S)
     - by Elegoo (available from Amazon)
+*  [220 Ohm Resistor, 1/4 W](https://www.amazon.com/gp/product/B0185FC0OK)
+    - by E-Projects (available from Amazon)
 *  [Aike 3.5mm Plastic PCB Mount 5-Pin Stereo Socket Audio Connector](https://www.amazon.com/gp/product/B01N5DIZQG)
     - by Aike (available from Amazon)
 
@@ -25,7 +27,7 @@ Please see the [Daughter Board Module](module.md) for a more specific parts list
 
 | Internal View | External View |
 |:-------------:|:-------------:|
-![Figure 3](diagrams/IMG_9893.jpg "Figure 3") | ![Figure 5](diagrams/IMG_9895.jpg "Figure 5") |
+![Figure 3](diagrams/IMG_9906.jpg "Figure 3") | ![Figure 5](diagrams/IMG_9895.jpg "Figure 5") |
 
 
 ## Programming the Arduino Nano

@@ -25,6 +25,9 @@ I also used some parts I had laying around, but here are some links to kits that
 *  [Solid Core Hookup Wire](https://www.amazon.com/gp/product/B00B4ZRPEY)
     - by Electronix Express
     - You could use the jumper cable wires above or leave solder trails across the PCB, but I prefer solid-core wire.
+*  [220 Ohm Resistor, 1/4 W](https://www.amazon.com/gp/product/B0185FC0OK)
+    - by E-Projects (available from Amazon)
+    - You only need one, but you can never buy just one!
 
 
 ### Putting it all together
@@ -60,7 +63,7 @@ Below is a high-level overview of what went into creating the expansion module. 
 
 3.  Since you are making a PCB sandwich, and so it fits into the case properly, notches will need to be cut for any RCA jacks you have on your Audio Switch. This may be none, it may be as many as 5. Simply cut along the set of holes that are just larger than the component you are trying to accommodate. See Figure 2.
 
-    ![Figure 2](diagrams/IMG_9897.jpg "Figure 2")
+    ![Figure 2](diagrams/IMG_9908.jpg "Figure 2")
         Figure 2.
 
 ### Soldering the Components ###
@@ -70,10 +73,10 @@ Below is a high-level overview of what went into creating the expansion module. 
 
 6.  Next I soldered right-angle pin headers onto the Arduino nano to accommodate the Dupont connectors without running into the Audio switch board below. I soldered it such that the black spacer for the header pins was used as a spacer below the Nano and the right angle came up through the Nano. This made it tricky to solder without being messy. If I did the project over again, I would have used the straight pin headers to solder to the PCB. I would have then soldered the right angle pin headers to the six pin ICSP socket. It turns out that the 5V, GND and D11 pins are all nicely lined up in the ICSP socket. See the [Nano Pinout Diagram](https://components101.com/microcontrollers/arduino-nano) for details on the ICSP pinout. I soldered both the Arduino Nano and Phono jack to the PCB as show in Figure 2 and Figure 3.
 
-    ![Figure 3](diagrams/IMG_9893.jpg "Figure 3")
+    ![Figure 3](diagrams/IMG_9906.jpg "Figure 3")
         Figure 3.
 
-7.  Finally, I soldered hookup wire from GND and D3 to Sleeve (pin 1) and Tip (pin 5) respectively on the phono jack. See Figure 2 above.
+7.  Finally, I soldered hookup wire from GND to Sleeve (pin 1) on the phono jack, and a 220 Ohm resistor from D3 to Tip (pin 5) on the phono jack. The resistor is not really necessary since there is already one inline in the HK 320. However, in the case of an accidental grounding, the resistor ensures that we draw less than 25mA of current from D3 and do not destroy the Arduino Nano. See Figure 2 above.
 
 ### Cutting a hole in the face plate. ###
 8.  Hopefully you have already measured where the hole should be before you cut the PCB and soldered the components. It is much easier to do that before the componets are added to the board. Take the faceplate off of the case and clamp it down to a scrap piece of lumber. Make sure that you have put a piece of tape over the faceplate in the area you are drilling.
